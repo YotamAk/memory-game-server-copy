@@ -8,7 +8,7 @@ import {
 
 const app = express();
 app.use(cors());
-const port = 4000 || process.env.port;
+const port =  process.env.port || 4000;
 
 let shuffeldCards = shuffleArray(cards);
 let selectedCard = null;
