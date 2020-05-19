@@ -8,7 +8,7 @@ import {
 
 const app = express();
 app.use(cors());
-const port =  process.env.port || 4000;
+const port =  process.env.port ||4000;
 
 let shuffeldCards = shuffleArray(cards);
 let selectedCard = null;
@@ -16,7 +16,8 @@ let gameOver = false;
 let compare = true;
 
 app.get('/', (req, res) => {
-    res.json(shuffeldCards)
+    res.send("wel")
+    // res.json(shuffeldCards)
 })
 
 app.get('/card/:index', (req, res) => {
